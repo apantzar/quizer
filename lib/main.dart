@@ -5,8 +5,12 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
+  var questionIndex = 0;
   void answerQuestion() {
-    print('Answered');
+    questionIndex++;
+
+    //testing
+   // print(questionIndex);
   }
 
   @override
@@ -21,20 +25,23 @@ class MyApp extends StatelessWidget {
           title: Text('Quizer App'),
         ),
         body: Column(children: <Widget>[
-          Text('Question'),
+          Text(question[questionIndex]),
           // ignore: deprecated_member_use
           RaisedButton(
             child: Text('Answer 1'),
             onPressed: answerQuestion,
           ),
+          // ignore: deprecated_member_use
           RaisedButton(
             child: Text('Answer 2'),
             onPressed: () => print('Answer 2'),
           ),
+          // ignore: deprecated_member_use
           RaisedButton(
             child: Text('Answer 3'),
             onPressed: () => print('Answer 3'),
           ),
+          // ignore: deprecated_member_use
           RaisedButton(
               child: Text('Answer 4'), onPressed: () => print('Answer 4')),
         ]),
