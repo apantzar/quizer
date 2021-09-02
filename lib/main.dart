@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './question.dart';
 
 void main() {
   runApp(MyApp());
@@ -39,7 +40,9 @@ class _MyAppState extends State<MyApp> {
           title: Text('Quizer App'),
         ),
         body: Column(children: <Widget>[
-          Text(question[_questionIndex]),
+          Question(
+            question[_questionIndex]
+            ),
           // ignore: deprecated_member_use
           RaisedButton(
             child: Text('Answer 1'),
