@@ -8,16 +8,16 @@ class MyApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return MyAppState();
+    return _MyAppState();
   }
 }
 
-class MyAppState extends State<MyApp> {
-  var questionIndex = 0;
-  void answerQuestion() {
+class _MyAppState extends State<MyApp> {
+  var _questionIndex = 0;
+  void _answerQuestion() {
     setState(() {
      
-         questionIndex++;
+         _questionIndex++;
       
      
     });
@@ -39,11 +39,11 @@ class MyAppState extends State<MyApp> {
           title: Text('Quizer App'),
         ),
         body: Column(children: <Widget>[
-          Text(question[questionIndex]),
+          Text(question[_questionIndex]),
           // ignore: deprecated_member_use
           RaisedButton(
             child: Text('Answer 1'),
-            onPressed: answerQuestion,
+            onPressed: _answerQuestion,
           ),
           // ignore: deprecated_member_use
           RaisedButton(
